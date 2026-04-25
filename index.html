@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Gharelu — A web platform that simplifies access to household services. Connect with trusted local providers today." />
+    <title>Gharelu — Simplifying Household Services</title>
+
+    <!-- Favicon: logo mark -->
+    <link rel="icon" type="image/png" href="assets/logofinal.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ══════════════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════════════ -->
+    <header>
+        <nav role="navigation" aria-label="Main navigation">
+
+            <!--
+        Logo: SVG chevron icon (matches the logo shape) + wordmark text.
+        The SVG is inlined so it renders cleanly on the dark navbar
+        with zero background issues.
+      -->
+            <a href="#home" class="nav-logo" aria-label="Gharelu — back to top">
+                <span class="nav-logo-icon" aria-hidden="true">
+                    <!-- Rooftop / chevron matching logofinal.png shape -->
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <polyline points="3 12 12 4 21 12" />
+                    </svg>
+                </span>
+                <span class="nav-logo-word">Ghare<em>lu</em></span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="login.html" class="nav-cta">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ══════════════════════════════════════════════
+         HERO
+    ══════════════════════════════════════════════ -->
+        <section id="home" aria-labelledby="hero-h1">
+
+            <!-- Background blobs -->
+            <div class="hero-blob hb1" aria-hidden="true"></div>
+            <div class="hero-blob hb2" aria-hidden="true"></div>
+            <div class="hero-blob hb3" aria-hidden="true"></div>
+
+            <div class="container">
+                <div class="hero-inner">
+
+                    <!-- Left: text content -->
+                    <div class="hero-text">
+
+                        <!--
+              Logo displayed in the hero — shown inside a white tile
+              so the PNG's white background looks intentional.
+            -->
+                        <div class="hero-logo-display fu d1">
+                            <div class="hero-logo-img-wrap">
+                                <img src="assets/logofinal.png" alt="Gharelu logo" />
+                            </div>
+                        </div>
+
+                        <div class="hero-pill fu d1">
+                            <span>🏠</span> Household Services Made Easy
+                        </div>
+
+                        <h1 class="hero-h1 fu d2" id="hero-h1">
+                            Simplifying<br>
+                            <!-- FIX: .hero-accent instead of .hi — no class collision -->
+                            <span class="hero-accent">Household</span> Services
+                        </h1>
+
+                        <p class="hero-p fu d3">
+                            Gharelu connects you with trusted local service providers — from
+                            plumbers to electricians — all in one clean, easy-to-use platform.
+                            No calls. No hassle.
+                        </p>
+
+                        <div class="hero-cta fu d4">
+                            <a href="#about" class="btn btn-white">🚀 Get Started</a>
+                            <a href="login.html" class="btn btn-ghost">🔑 Login</a>
+                        </div>
+
+                        <div class="hero-stats fu d5">
+                            <div class="h-stat"><strong>50+</strong><span>Services</span></div>
+                            <div class="h-stat"><strong>3</strong><span>Dashboards</span></div>
+                            <div class="h-stat"><strong>100%</strong><span>Free to Join</span></div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right: floating mock dashboard -->
+                    <div class="hero-card-wrap fu d3" aria-hidden="true">
+                        <div class="hero-card">
+
+                            <div class="hc-head">
+                                <div class="hc-av">👤</div>
+                                <div class="hc-info">
+                                    <strong>My Gharelu Dashboard</strong>
+                                    <span>Welcome back, Nabin</span>
+                                </div>
+                            </div>
+
+                            <div class="hc-rows">
+                                <div class="hc-row">
+                                    <div class="hc-row-l">
+                                        <div class="hc-ico">🔧</div>
+                                        <span class="hc-label">Plumbing Fix</span>
+                                    </div>
+                                    <span class="hc-badge">Booked</span>
+                                </div>
+                                <div class="hc-row">
+                                    <div class="hc-row-l">
+                                        <div class="hc-ico">⚡</div>
+                                        <span class="hc-label">Electrical Work</span>
+                                    </div>
+                                    <span class="hc-badge hc-badge-avail">Available</span>
+                                </div>
+                                <div class="hc-row">
+                                    <div class="hc-row-l">
+                                        <div class="hc-ico">🧹</div>
+                                        <span class="hc-label">House Cleaning</span>
+                                    </div>
+                                    <span class="hc-badge hc-badge-avail">Available</span>
+                                </div>
+                            </div>
+
+                            <a href="#services" class="hc-cta-btn">Explore All Services →</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════════
+         ABOUT
+    ══════════════════════════════════════════════ -->
+        <section id="about" aria-labelledby="about-h2">
+            <div class="container">
+                <div class="about-inner">
+
+                    <!-- Left: dark stats panel -->
+                    <div class="about-panel">
+                        <span class="ap-label">At a glance</span>
+                        <h3 class="ap-title">Why Gharelu?</h3>
+                        <p class="ap-desc">
+                            A smarter, faster way to handle every household need —
+                            designed for real people with real problems.
+                        </p>
+                        <div class="ap-grid">
+                            <div class="ap-stat"><strong>3+</strong><span>Categories</span></div>
+                            <div class="ap-stat"><strong>2</strong><span>Dashboards</span></div>
+                            <div class="ap-stat"><strong>100%</strong><span>Web Based</span></div>
+                            <div class="ap-stat"><strong>G11</strong><span>Built by</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Right: description + highlights -->
+                    <div class="about-content">
+                        <span class="eyebrow">About Gharelu</span>
+                        <h2 class="sec-title" id="about-h2">What is Gharelu?</h2>
+                        <p class="about-body">
+                            Gharelu is a web-based platform designed to simplify how households access
+                            everyday services. Whether you need a plumber, electrician, or cleaning
+                            professional, Gharelu connects you with verified local providers — quickly
+                            and effortlessly. No phone calls, no middlemen.
+                        </p>
+
+                        <!-- FIX: .hi-card instead of .hi — no white-background collision -->
+                        <div class="hi-list">
+                            <div class="hi-card">
+                                <div class="hi-ic">⚡</div>
+                                <div class="hi-bd">
+                                    <h4>Easy Service Access</h4>
+                                    <p>Browse and book household services in a few clicks, anytime, anywhere.</p>
+                                </div>
+                            </div>
+                            <div class="hi-card">
+                                <div class="hi-ic">🎨</div>
+                                <div class="hi-bd">
+                                    <h4>User-Friendly Interface</h4>
+                                    <p>Clean, intuitive design that anyone can navigate with zero learning curve.</p>
+                                </div>
+                            </div>
+                            <div class="hi-card">
+                                <div class="hi-ic">🗂️</div>
+                                <div class="hi-bd">
+                                    <h4>Role-Based Dashboards</h4>
+                                    <p>Tailored views for customers and providers — each role gets exactly what they
+                                        need.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════════
+         SERVICES
+    ══════════════════════════════════════════════ -->
+        <section id="services" aria-labelledby="svc-h2">
+            <div class="container">
+
+                <div class="svc-header">
+                    <span class="eyebrow eyebrow-lite">Features</span>
+                    <h2 class="sec-title sec-title-w" id="svc-h2">What Gharelu Offers</h2>
+                    <p class="sec-sub sec-sub-w">
+                        Everything you need to manage household services — built with
+                        simplicity and role-based access in mind.
+                    </p>
+                </div>
+
+                <div class="feat-grid">
+
+                    <article class="feat-card">
+                        <span class="feat-num">01 — Auth System</span>
+                        <div class="feat-ic">🔐</div>
+                        <h3>Login &amp; Signup System</h3>
+                        <p>
+                            Secure authentication lets users and service providers create accounts,
+                            sign in safely, and manage their profiles with ease.
+                        </p>
+                        <span class="feat-tag">Authentication</span>
+                    </article>
+
+                    <article class="feat-card">
+                        <span class="feat-num">02 — For Homeowners</span>
+                        <div class="feat-ic">📊</div>
+                        <h3>User Dashboard</h3>
+                        <p>
+                            Homeowners get a personalized space to browse services, track bookings,
+                            view history, and manage account settings — all in one place.
+                        </p>
+                        <span class="feat-tag">Customer Portal</span>
+                    </article>
+
+                    <article class="feat-card">
+                        <span class="feat-num">03 — For Providers</span>
+                        <div class="feat-ic">🛠️</div>
+                        <h3>Service Provider Dashboard</h3>
+                        <p>
+                            Providers manage listings, respond to requests, and track ongoing and
+                            completed jobs from a single, powerful dashboard.
+                        </p>
+                        <span class="feat-tag">Provider Portal</span>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════════
+         TEAM
+    ══════════════════════════════════════════════ -->
+        <section id="team" aria-labelledby="team-h2">
+            <div class="container">
+
+                <div class="team-header">
+                    <span class="eyebrow">Our Team</span>
+                    <h2 class="sec-title" id="team-h2">Meet the People Behind Gharelu</h2>
+                    <p class="sec-sub">
+                        A passionate group of Grade 11 students building something real — together.
+                    </p>
+                </div>
+
+                <div class="team-grid">
+
+                    <div class="team-card tc1">
+                        <div class="av-wrap">
+                            <div class="av">N</div>
+                        </div>
+                        <h3>Nabin Bikram Thapa</h3>
+                        <div class="t-role">Technical Lead</div>
+                        <div class="t-title">Frontend Developer</div>
+                    </div>
+
+                    <div class="team-card tc2">
+                        <div class="av-wrap">
+                            <div class="av">S</div>
+                        </div>
+                        <h3>Sulav Adhikari</h3>
+                        <div class="t-role">Design Assist</div>
+                        <div class="t-title">Frontend Developer</div>
+                    </div>
+
+                    <div class="team-card tc3">
+                        <div class="av-wrap">
+                            <div class="av">A</div>
+                        </div>
+                        <h3>Aayam Gajurel</h3>
+                        <div class="t-role">Tech Assist</div>
+                        <div class="t-title">Frontend Developer</div>
+                    </div>
+
+                    <div class="team-card tc4">
+                        <div class="av-wrap">
+                            <div class="av">D</div>
+                        </div>
+                        <h3>Dipsan Magar</h3>
+                        <div class="t-role">Design Lead</div>
+                        <div class="t-title">Frontend Developer</div>
+                    </div>
+
+                    <div class="team-card tc5">
+                        <div class="av-wrap">
+                            <div class="av">Ab</div>
+                        </div>
+                        <h3>Abinash Lammichhane</h3>
+                        <div class="t-role">Overall Analyst</div>
+                        <div class="t-title">Researcher</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ══════════════════════════════════════════════
+       CTA BAND
+  ══════════════════════════════════════════════ -->
+    <div class="cta-band">
+        <div class="cta-inner">
+            <h2>Ready to Simplify Your Home?</h2>
+            <p>
+                Join Gharelu today and connect with trusted local service providers.
+                It's 100% free to get started.
+            </p>
+            <div class="cta-btns">
+                <a href="#" class="btn btn-white">🚀 Get Started Free</a>
+                <a href="login.html" class="btn btn-ghost-w">🔑 Login to Account</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+    <footer>
+        <div class="container">
+
+            <div class="foot-grid">
+
+                <!-- Brand column — SVG icon + wordmark, no white-box issue -->
+                <div class="foot-brand">
+                    <div class="foot-logo-wrap">
+                        <span class="foot-logo-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="3 12 12 4 21 12" />
+                            </svg>
+                        </span>
+                        <span class="foot-logo-word">Ghare<em>lu</em></span>
+                    </div>
+                    <p>
+                        Simplifying household services for everyone, one booking at a time.
+                        Built by Grade 11 students with care and dedication.
+                    </p>
+                    <span class="foot-badge">🎓 Grade 11 Project</span>
+                </div>
+
+                <div class="foot-col">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#team">Team</a></li>
+                    </ul>
+                </div>
+
+                <div class="foot-col">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="login.html">Sign Up</a></li>
+                        <li><a href="#services">User Dashboard</a></li>
+                        <li><a href="#services">Provider Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <div class="foot-col">
+                    <h4>Project</h4>
+                    <ul>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#about">About Gharelu</a></li>
+                        <li><a href="#services">Features</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="foot-bottom">
+                <p>&copy; 2025 <em>Gharelu</em>. All rights reserved.</p>
+                <p>Built with ❤️ by <em>Team Gharelu — Grade 11</em></p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
