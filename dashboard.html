@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Your Gharelu dashboard — browse workers, book services, and manage your household bookings." />
+  <title>Dashboard — Gharelu</title>
+  <link rel="icon" type="image/png" href="assets/logofinal.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="db-body">
+
+  <!-- ══════════════════════════════════════════════════════
+       SIDEBAR (Desktop)
+  ══════════════════════════════════════════════════════ -->
+  <aside class="db-sidebar" role="navigation" aria-label="Sidebar navigation">
+
+    <!-- Brand -->
+    <div class="sb-logo">
+      <div class="nav-logo-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <polyline points="3 12 12 4 21 12" />
+        </svg>
+      </div>
+      <span class="nav-logo-word">Ghare<em>lu</em></span>
+    </div>
+
+    <!-- Nav links -->
+    <ul class="sb-nav">
+      <li class="sb-item sb-active">
+        <a href="dashboard.html" class="sb-link" id="sb-home">
+          <span class="sb-icon" aria-hidden="true">🏠</span>
+          <span class="sb-label">Home</span>
+        </a>
+      </li>
+      <li class="sb-item">
+        <a href="bookings.html" class="sb-link" id="sb-bookings">
+          <span class="sb-icon" aria-hidden="true">📋</span>
+          <span class="sb-label">My Bookings</span>
+        </a>
+      </li>
+      <li class="sb-item">
+        <a href="profile.html" class="sb-link" id="sb-profile">
+          <span class="sb-icon" aria-hidden="true">👤</span>
+          <span class="sb-label">Profile</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Logout at bottom -->
+    <div class="sb-footer">
+      <a href="index.html" class="sb-logout" id="sb-logout">
+        <span class="sb-icon" aria-hidden="true">🚪</span>
+        <span class="sb-label">Logout</span>
+      </a>
+    </div>
+
+  </aside>
+
+  <!-- ══════════════════════════════════════════════════════
+       MAIN CONTENT AREA
+  ══════════════════════════════════════════════════════ -->
+  <div class="db-content">
+
+    <!-- ── TOP NAVBAR ──────────────────────────────────── -->
+    <header class="db-topbar">
+
+      <!-- Left: Mobile hamburger + brand -->
+      <div class="db-topbar-left">
+        <div class="db-mobile-brand">
+          <div class="nav-logo-icon sm" aria-hidden="true">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <polyline points="3 12 12 4 21 12" />
+            </svg>
+          </div>
+          <span class="nav-logo-word">Ghare<em>lu</em></span>
+        </div>
+        <h2 class="db-page-title">Dashboard</h2>
+      </div>
+
+      <!-- Right: notification bell + user info -->
+      <div class="db-topbar-right">
+
+        <!-- CSS-only notification bell with red dot badge -->
+        <div class="db-notif" aria-label="Notifications">
+          <div class="notif-bell" aria-hidden="true">🔔</div>
+          <span class="notif-badge" aria-hidden="true">3</span>
+        </div>
+
+        <!-- User avatar + name -->
+        <div class="db-user">
+          <div class="db-avatar" aria-hidden="true">U</div>
+          <div class="db-user-info">
+            <span class="db-welcome">Welcome back,</span>
+            <span class="db-username">User</span>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- ── SCROLLABLE INNER ───────────────────────────── -->
+    <div class="db-inner">
+      <!-- Greeting banner -->
+      <div class="db-greeting">
+        <div>
+          <h1 class="db-greet-title">Good morning, User 👋</h1>
+          <p class="db-greet-sub">Find and book trusted household workers near you.</p>
+        </div>
+        <div class="db-greet-badge">
+          <span aria-hidden="true">📍</span> Kathmandu, Nepal
+        </div>
+      </div>
+
+      <!-- ── SEARCH & FILTER BAR ──────────────────────── -->
+      <section class="db-search-section" aria-label="Search and filter services">
+        <div class="db-search-wrap">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input
+            id="service-search"
+            type="search"
+            class="db-search-input"
+            placeholder="Search for a service…"
+            aria-label="Search for a service"
+          />
+        </div>
+        <div class="db-filters" role="group" aria-label="Filter workers">
+          <a href="#" class="filter-pill filter-active" id="filter-all">All</a>
+          <a href="#" class="filter-pill" id="filter-available">Available Now</a>
+          <a href="#" class="filter-pill" id="filter-rated">Top Rated</a>
+        </div>
+      </section>
+
+      <!-- ── SERVICE CATEGORY BAR ────────────────────── -->
+      <section class="db-categories" aria-labelledby="cat-heading">
+        <h2 class="db-section-title" id="cat-heading">Categories</h2>
+        <div class="cat-scroll" role="list">
+
+          <a href="#" class="cat-card" role="listitem" id="cat-cleaning">
+            <span class="cat-emoji" aria-hidden="true">🧹</span>
+            <span class="cat-label">Cleaning</span>
+          </a>
+          <a href="#" class="cat-card" role="listitem" id="cat-brooming">
+            <span class="cat-emoji" aria-hidden="true">🪣</span>
+            <span class="cat-label">Brooming</span>
+          </a>
+          <a href="#" class="cat-card" role="listitem" id="cat-dishwashing">
+            <span class="cat-emoji" aria-hidden="true">🍽️</span>
+            <span class="cat-label">Dishwashing</span>
+          </a>
+          <a href="#" class="cat-card" role="listitem" id="cat-laundry">
+            <span class="cat-emoji" aria-hidden="true">👕</span>
+            <span class="cat-label">Laundry</span>
+          </a>
+          <a href="#" class="cat-card" role="listitem" id="cat-gardening">
+            <span class="cat-emoji" aria-hidden="true">🌿</span>
+            <span class="cat-label">Gardening</span>
+          </a>
+          <a href="#" class="cat-card" role="listitem" id="cat-labor">
+            <span class="cat-emoji" aria-hidden="true">🔨</span>
+            <span class="cat-label">General Labor</span>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- ── WORKERS NEAR YOU ────────────────────────── -->
+      <section class="db-workers" aria-labelledby="workers-heading">
+        <h2 class="db-section-title" id="workers-heading">Workers Near You</h2>
+
+        <div class="workers-grid">
+
+          <!-- Worker Card 1 -->
+          <article class="worker-card" id="worker-1">
+            <div class="wc-top">
+              <div class="wc-avatar" aria-hidden="true">S</div>
+              <span class="wc-avail avail-green">● Available</span>
+            </div>
+            <h3 class="wc-name">Sita Tamang</h3>
+            <span class="wc-badge">🧹 Cleaning</span>
+            <div class="wc-stars" aria-label="Rating: 5 out of 5 stars">
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star filled" aria-hidden="true">★</span>
+            </div>
+            <div class="wc-price">Rs. 250 <span>/hr</span></div>
+            <div class="wc-spacer"></div>
+            <a href="#" class="wc-book-btn" id="book-sita">Book Now</a>
+          </article>
+
+          <!-- Worker Card 2 -->
+          <article class="worker-card" id="worker-2">
+            <div class="wc-top">
+              <div class="wc-avatar av2" aria-hidden="true">R</div>
+              <span class="wc-avail avail-gray">● Busy</span>
+            </div>
+            <h3 class="wc-name">Ram Bahadur</h3>
+            <span class="wc-badge">🪣 Brooming</span>
+            <div class="wc-stars" aria-label="Rating: 4 out of 5 stars">
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+            </div>
+            <div class="wc-price">Rs. 180 <span>/hr</span></div>
+            <div class="wc-spacer"></div>
+            <a href="#" class="wc-book-btn" id="book-ram">Book Now</a>
+          </article>
+
+          <!-- Worker Card 3 -->
+          <article class="worker-card" id="worker-3">
+            <div class="wc-top">
+              <div class="wc-avatar av3" aria-hidden="true">M</div>
+              <span class="wc-avail avail-green">● Available</span>
+            </div>
+            <h3 class="wc-name">Maya Shrestha</h3>
+            <span class="wc-badge">🍽️ Dishwashing</span>
+            <div class="wc-stars" aria-label="Rating: 5 out of 5 stars">
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star filled" aria-hidden="true">★</span>
+            </div>
+            <div class="wc-price">Rs. 200 <span>/hr</span></div>
+            <div class="wc-spacer"></div>
+            <a href="#" class="wc-book-btn" id="book-maya">Book Now</a>
+          </article>
+
+          <!-- Worker Card 4 -->
+          <article class="worker-card" id="worker-4">
+            <div class="wc-top">
+              <div class="wc-avatar av4" aria-hidden="true">K</div>
+              <span class="wc-avail avail-green">● Available</span>
+            </div>
+            <h3 class="wc-name">Krishna Gurung</h3>
+            <span class="wc-badge">👕 Laundry</span>
+            <div class="wc-stars" aria-label="Rating: 4 out of 5 stars">
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+            </div>
+            <div class="wc-price">Rs. 220 <span>/hr</span></div>
+            <div class="wc-spacer"></div>
+            <a href="#" class="wc-book-btn" id="book-krishna">Book Now</a>
+          </article>
+
+          <!-- Worker Card 5 -->
+          <article class="worker-card" id="worker-5">
+            <div class="wc-top">
+              <div class="wc-avatar av5" aria-hidden="true">B</div>
+              <span class="wc-avail avail-gray">● Busy</span>
+            </div>
+            <h3 class="wc-name">Bimala Rai</h3>
+            <span class="wc-badge">🌿 Gardening</span>
+            <div class="wc-stars" aria-label="Rating: 5 out of 5 stars">
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star filled" aria-hidden="true">★</span>
+            </div>
+            <div class="wc-price">Rs. 300 <span>/hr</span></div>
+            <div class="wc-spacer"></div>
+            <a href="#" class="wc-book-btn" id="book-bimala">Book Now</a>
+          </article>
+
+          <!-- Worker Card 6 -->
+          <article class="worker-card" id="worker-6">
+            <div class="wc-top">
+              <div class="wc-avatar av6" aria-hidden="true">D</div>
+              <span class="wc-avail avail-green">● Available</span>
+            </div>
+            <h3 class="wc-name">Dev Karki</h3>
+            <span class="wc-badge">🔨 General Labor</span>
+            <div class="wc-stars" aria-label="Rating: 4 out of 5 stars">
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star filled" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+            </div>
+            <div class="wc-price">Rs. 270 <span>/hr</span></div>
+            <div class="wc-spacer"></div>
+            <a href="#" class="wc-book-btn" id="book-dev">Book Now</a>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ── MY BOOKINGS ─────────────────────────────── -->
+      <section class="db-bookings" id="my-bookings" aria-labelledby="bookings-heading">
+        <h2 class="db-section-title" id="bookings-heading">My Bookings</h2>
+
+        <div class="bookings-list">
+
+          <!-- Booking 1 — Pending -->
+          <div class="booking-entry" id="booking-1">
+            <div class="booking-left">
+              <div class="booking-avatar" aria-hidden="true">S</div>
+              <div class="booking-info">
+                <div class="booking-name">Sita Tamang</div>
+                <div class="booking-service">🧹 Cleaning</div>
+                <div class="booking-datetime">📅 Apr 27, 2025 &nbsp;·&nbsp; 🕙 10:00 AM</div>
+              </div>
+            </div>
+            <span class="booking-status status-pending">Pending</span>
+          </div>
+
+          <!-- Booking 2 — Confirmed -->
+          <div class="booking-entry" id="booking-2">
+            <div class="booking-left">
+              <div class="booking-avatar ba2" aria-hidden="true">M</div>
+              <div class="booking-info">
+                <div class="booking-name">Maya Shrestha</div>
+                <div class="booking-service">🍽️ Dishwashing</div>
+                <div class="booking-datetime">📅 Apr 28, 2025 &nbsp;·&nbsp; 🕒 2:00 PM</div>
+              </div>
+            </div>
+            <span class="booking-status status-confirmed">Confirmed</span>
+          </div>
+
+          <!-- Booking 3 — Completed -->
+          <div class="booking-entry" id="booking-3">
+            <div class="booking-left">
+              <div class="booking-avatar ba3" aria-hidden="true">K</div>
+              <div class="booking-info">
+                <div class="booking-name">Krishna Gurung</div>
+                <div class="booking-service">👕 Laundry</div>
+                <div class="booking-datetime">📅 Apr 24, 2025 &nbsp;·&nbsp; 🕗 9:00 AM</div>
+              </div>
+            </div>
+            <span class="booking-status status-completed">Completed</span>
+          </div>
+
+        </div>
+      </section>
+
+    </div><!-- /db-inner -->
+  </div><!-- /db-content -->
+
+  <!-- ══════════════════════════════════════════════════════
+       BOTTOM NAVIGATION (Mobile)
+  ══════════════════════════════════════════════════════ -->
+  <nav class="db-bottom-nav" role="navigation" aria-label="Mobile bottom navigation">
+    <a href="dashboard.html" class="bn-item bn-active" id="bn-home">
+      <span class="bn-icon" aria-hidden="true">🏠</span>
+      <span class="bn-label">Home</span>
+    </a>
+    <a href="bookings.html" class="bn-item" id="bn-bookings">
+      <span class="bn-icon" aria-hidden="true">📋</span>
+      <span class="bn-label">Bookings</span>
+    </a>
+    <a href="profile.html" class="bn-item" id="bn-profile">
+      <span class="bn-icon" aria-hidden="true">👤</span>
+      <span class="bn-label">Profile</span>
+    </a>
+    <a href="index.html" class="bn-item" id="bn-logout">
+      <span class="bn-icon" aria-hidden="true">🚪</span>
+      <span class="bn-label">Logout</span>
+    </a>
+  </nav>
+
+</body>
+</html>

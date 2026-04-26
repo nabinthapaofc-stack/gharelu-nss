@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Log in to your Gharelu account and access trusted household services near you." />
+  <title>Login — Gharelu</title>
+  <link rel="icon" type="image/png" href="assets/logofinal.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="auth-body">
+
+  <!-- ── NAVBAR ───────────────────────────────────────── -->
+  <header>
+    <nav role="navigation" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="Gharelu — home">
+        <span class="nav-logo-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="3 12 12 4 21 12" />
+          </svg>
+        </span>
+        <span class="nav-logo-word">Ghare<em>lu</em></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="signup.html" class="nav-cta">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ── AUTH WRAPPER ───────────────────────────────────── -->
+  <main class="auth-main">
+
+    <!-- Decorative background blobs -->
+    <div class="auth-blob ab1" aria-hidden="true"></div>
+    <div class="auth-blob ab2" aria-hidden="true"></div>
+
+    <div class="auth-card fu d1">
+
+      <!-- Logo mark -->
+      <div class="auth-logo-wrap">
+        <div class="auth-logo-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="3 12 12 4 21 12" />
+          </svg>
+        </div>
+        <div class="auth-logo-text">
+          <span class="auth-brand">Ghare<em>lu</em></span>
+          <span class="auth-tagline">Your Home, Our Priority</span>
+        </div>
+      </div>
+
+      <h1 class="auth-title">Welcome back</h1>
+      <p class="auth-sub">Sign in to your account to continue</p>
+
+      <form class="auth-form" action="dashboard.html" method="get" novalidate>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="login-email" class="form-label">Email address</label>
+          <div class="input-wrap">
+            <span class="input-icon" aria-hidden="true">✉️</span>
+            <input
+              id="login-email"
+              type="email"
+              name="email"
+              class="form-input"
+              placeholder="you@example.com"
+              required
+              autocomplete="email"
+            />
+          </div>
+        </div>
+
+        <!-- Password with CSS-only show/hide toggle (checkbox hack) -->
+        <div class="form-group">
+          <label for="login-password" class="form-label">Password</label>
+          <div class="input-wrap pw-wrap">
+
+            <!-- The hidden checkbox that drives the toggle -->
+            <input type="checkbox" id="pw-toggle" class="pw-checkbox" aria-label="Show password" />
+
+            <!-- The actual password field — type switches via CSS sibling selector -->
+            <span class="input-icon" aria-hidden="true">🔒</span>
+            <input
+              id="login-password"
+              type="password"
+              name="password"
+              class="form-input pw-field"
+              placeholder="Enter your password"
+              required
+              minlength="6"
+              autocomplete="current-password"
+            />
+
+            <!-- The visible toggle label — clicking it checks/unchecks the checkbox -->
+            <label for="pw-toggle" class="pw-toggle-label" title="Show / Hide password">
+              <!-- Eye open (shown when password is hidden) -->
+              <span class="pw-eye pw-eye-show" aria-hidden="true">👁️</span>
+              <!-- Eye closed (shown when password is visible) -->
+              <span class="pw-eye pw-eye-hide" aria-hidden="true">🙈</span>
+            </label>
+          </div>
+          <!-- CSS trick: a sibling <input type="text"> that mirrors the pw field is not
+               feasible in pure CSS; instead we use the :checked state on the checkbox
+               to change the real input's -webkit-text-security via a custom property
+               override declared in style.css using the general sibling combinator. -->
+        </div>
+
+        <!-- Remember me + Forgot password -->
+        <div class="form-row-between">
+          <label class="checkbox-label" for="remember-me">
+            <input type="checkbox" id="remember-me" name="remember" />
+            <span class="checkbox-custom" aria-hidden="true"></span>
+            <span>Remember me</span>
+          </label>
+          <a href="#" class="link-muted">Forgot password?</a>
+        </div>
+
+        <!-- Submit -->
+        <a href="dashboard.html" class="auth-btn" id="login-submit" style="text-align:center;display:block;">Login to Gharelu</a>
+
+      </form>
+
+      <p class="auth-switch">
+        Don't have an account?
+        <a href="signup.html" class="auth-switch-link">Sign Up</a>
+      </p>
+
+    </div>
+  </main>
+
+</body>
+</html>

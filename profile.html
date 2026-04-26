@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Your Gharelu profile — manage your personal info, security settings and preferences." />
+  <title>My Profile — Gharelu</title>
+  <link rel="icon" type="image/png" href="assets/logofinal.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="db-body">
+
+  <!-- SIDEBAR -->
+  <aside class="db-sidebar" role="navigation" aria-label="Sidebar navigation">
+    <div class="sb-logo">
+      <div class="nav-logo-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="3 12 12 4 21 12" /></svg>
+      </div>
+      <span class="nav-logo-word">Ghare<em>lu</em></span>
+    </div>
+    <ul class="sb-nav">
+      <li class="sb-item"><a href="dashboard.html" class="sb-link" id="sb-home"><span class="sb-icon">🏠</span><span class="sb-label">Home</span></a></li>
+      <li class="sb-item"><a href="bookings.html" class="sb-link" id="sb-bookings"><span class="sb-icon">📋</span><span class="sb-label">My Bookings</span></a></li>
+      <li class="sb-item sb-active"><a href="profile.html" class="sb-link" id="sb-profile"><span class="sb-icon">👤</span><span class="sb-label">Profile</span></a></li>
+    </ul>
+    <div class="sb-footer">
+      <a href="index.html" class="sb-logout" id="sb-logout"><span class="sb-icon">🚪</span><span class="sb-label">Logout</span></a>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <div class="db-content">
+
+    <!-- TOP BAR -->
+    <header class="db-topbar">
+      <div class="db-topbar-left">
+        <div class="db-mobile-brand">
+          <div class="nav-logo-icon sm" aria-hidden="true">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="3 12 12 4 21 12" /></svg>
+          </div>
+          <span class="nav-logo-word">Ghare<em>lu</em></span>
+        </div>
+        <h2 class="db-page-title">My Profile</h2>
+      </div>
+      <div class="db-topbar-right">
+        <div class="db-notif" aria-label="Notifications">
+          <div class="notif-bell">🔔</div>
+          <span class="notif-badge">3</span>
+        </div>
+        <div class="db-user">
+          <div class="db-avatar">U</div>
+          <div class="db-user-info">
+            <span class="db-welcome">Welcome back,</span>
+            <span class="db-username">User</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- INNER -->
+    <div class="db-inner">
+
+      <!-- ══ PROFILE HERO CARD ══════════════════════════ -->
+      <div class="pf-hero">
+
+        <!-- Cover banner -->
+        <div class="pf-cover" aria-hidden="true">
+          <div class="pf-cover-pattern"></div>
+        </div>
+
+        <!-- Avatar + name row -->
+        <div class="pf-hero-body">
+          <div class="pf-avatar-wrap">
+            <div class="pf-avatar" aria-label="User avatar">U</div>
+            <div class="pf-avatar-badge" aria-label="Verified user" title="Verified">✓</div>
+          </div>
+          <div class="pf-hero-info">
+            <h1 class="pf-name">User Name</h1>
+            <p class="pf-email">user@example.com</p>
+            <div class="pf-meta-row">
+              <span class="pf-meta-chip"><span aria-hidden="true">📍</span> Kathmandu, Nepal</span>
+              <span class="pf-meta-chip"><span aria-hidden="true">🗓️</span> Member since Apr 2025</span>
+              <span class="pf-meta-chip pf-chip-verified"><span aria-hidden="true">✅</span> Verified Account</span>
+            </div>
+          </div>
+          <div class="pf-hero-actions">
+            <label for="pf-edit-toggle" class="pf-edit-btn" id="pf-edit-label">✏️ Edit Profile</label>
+          </div>
+        </div>
+
+        <!-- Stats row -->
+        <div class="pf-stats">
+          <div class="pf-stat">
+            <div class="pf-stat-val">6</div>
+            <div class="pf-stat-key">Total Bookings</div>
+          </div>
+          <div class="pf-stat-divider"></div>
+          <div class="pf-stat">
+            <div class="pf-stat-val">3</div>
+            <div class="pf-stat-key">Completed</div>
+          </div>
+          <div class="pf-stat-divider"></div>
+          <div class="pf-stat">
+            <div class="pf-stat-val">2</div>
+            <div class="pf-stat-key">Pending</div>
+          </div>
+          <div class="pf-stat-divider"></div>
+          <div class="pf-stat">
+            <div class="pf-stat-val">Rs. 3,320</div>
+            <div class="pf-stat-key">Total Spent</div>
+          </div>
+        </div>
+
+      </div><!-- /pf-hero -->
+
+      <!-- ══ PROFILE BODY: 2-col layout ════════════════ -->
+      <div class="pf-body-grid">
+
+        <!-- LEFT: Personal Info + Security -->
+        <div class="pf-left-col">
+
+          <!-- Hidden checkbox drives the edit-mode toggle (CSS only) -->
+          <input type="checkbox" id="pf-edit-toggle" class="pf-edit-checkbox" aria-label="Toggle edit mode" />
+
+          <!-- ── Personal Information ─────────────────── -->
+          <div class="pf-section-card" id="pf-personal">
+            <div class="pf-card-header">
+              <div class="pf-card-icon" aria-hidden="true">👤</div>
+              <div>
+                <h2 class="pf-card-title">Personal Information</h2>
+                <p class="pf-card-sub">Your basic account details</p>
+              </div>
+            </div>
+
+            <form class="pf-form" action="#" method="post">
+
+              <div class="pf-field-row">
+                <div class="pf-field">
+                  <label class="pf-label" for="pf-fname">Full Name</label>
+                  <div class="pf-input-wrap">
+                    <span class="pf-input-icon" aria-hidden="true">👤</span>
+                    <input id="pf-fname" type="text" class="pf-input" value="User Name" placeholder="Your full name" required />
+                  </div>
+                </div>
+                <div class="pf-field">
+                  <label class="pf-label" for="pf-phone">Phone Number</label>
+                  <div class="pf-input-wrap">
+                    <span class="pf-input-icon" aria-hidden="true">📱</span>
+                    <input id="pf-phone" type="tel" class="pf-input" value="+977 9800000000" placeholder="Phone number" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="pf-field">
+                <label class="pf-label" for="pf-email">Email Address</label>
+                <div class="pf-input-wrap">
+                  <span class="pf-input-icon" aria-hidden="true">✉️</span>
+                  <input id="pf-email" type="email" class="pf-input" value="user@example.com" placeholder="Email address" required />
+                </div>
+              </div>
+
+              <div class="pf-field">
+                <label class="pf-label" for="pf-address">Address</label>
+                <div class="pf-input-wrap">
+                  <span class="pf-input-icon" aria-hidden="true">📍</span>
+                  <input id="pf-address" type="text" class="pf-input" value="Kathmandu, Bagmati Province, Nepal" placeholder="Your address" />
+                </div>
+              </div>
+
+              <div class="pf-field">
+                <label class="pf-label" for="pf-bio">Bio</label>
+                <textarea id="pf-bio" class="pf-input pf-textarea" placeholder="Tell us a bit about yourself…">Regular Gharelu user. Love a clean and tidy home!</textarea>
+              </div>
+
+              <div class="pf-form-footer">
+                <a href="profile.html" class="pf-btn pf-btn-ghost">Discard</a>
+                <button type="submit" class="pf-btn pf-btn-primary">Save Changes</button>
+              </div>
+
+            </form>
+          </div><!-- /pf-personal -->
+
+          <!-- ── Security ────────────────────────────── -->
+          <div class="pf-section-card" id="pf-security">
+            <div class="pf-card-header">
+              <div class="pf-card-icon" aria-hidden="true">🔒</div>
+              <div>
+                <h2 class="pf-card-title">Security</h2>
+                <p class="pf-card-sub">Manage your password and account safety</p>
+              </div>
+            </div>
+
+            <form class="pf-form" action="#" method="post">
+              <div class="pf-field">
+                <label class="pf-label" for="pf-cur-pw">Current Password</label>
+                <div class="pf-input-wrap">
+                  <span class="pf-input-icon" aria-hidden="true">🔑</span>
+                  <input id="pf-cur-pw" type="password" class="pf-input" placeholder="Enter current password" />
+                </div>
+              </div>
+              <div class="pf-field-row">
+                <div class="pf-field">
+                  <label class="pf-label" for="pf-new-pw">New Password</label>
+                  <div class="pf-input-wrap">
+                    <span class="pf-input-icon" aria-hidden="true">🔒</span>
+                    <input id="pf-new-pw" type="password" class="pf-input" placeholder="New password" minlength="8" />
+                  </div>
+                </div>
+                <div class="pf-field">
+                  <label class="pf-label" for="pf-confirm-pw">Confirm Password</label>
+                  <div class="pf-input-wrap">
+                    <span class="pf-input-icon" aria-hidden="true">🔒</span>
+                    <input id="pf-confirm-pw" type="password" class="pf-input" placeholder="Repeat new password" minlength="8" />
+                  </div>
+                </div>
+              </div>
+              <div class="pf-form-footer">
+                <button type="submit" class="pf-btn pf-btn-primary">Update Password</button>
+              </div>
+            </form>
+          </div><!-- /pf-security -->
+
+        </div><!-- /pf-left-col -->
+
+        <!-- RIGHT: Activity + Preferences -->
+        <div class="pf-right-col">
+
+          <!-- ── Recent Activity ─────────────────────── -->
+          <div class="pf-section-card" id="pf-activity">
+            <div class="pf-card-header">
+              <div class="pf-card-icon" aria-hidden="true">📊</div>
+              <div>
+                <h2 class="pf-card-title">Recent Activity</h2>
+                <p class="pf-card-sub">Your last 3 bookings</p>
+              </div>
+            </div>
+            <div class="pf-activity-list">
+              <div class="pf-activity-item">
+                <div class="pf-act-dot" style="background:#15803d;" aria-hidden="true"></div>
+                <div class="pf-act-info">
+                  <div class="pf-act-title">Laundry — Krishna Gurung</div>
+                  <div class="pf-act-date">Apr 24, 2025</div>
+                </div>
+                <span class="booking-status status-completed">Completed</span>
+              </div>
+              <div class="pf-activity-item">
+                <div class="pf-act-dot" style="background:#1d4ed8;" aria-hidden="true"></div>
+                <div class="pf-act-info">
+                  <div class="pf-act-title">Dishwashing — Maya Shrestha</div>
+                  <div class="pf-act-date">Apr 28, 2025</div>
+                </div>
+                <span class="booking-status status-confirmed">Confirmed</span>
+              </div>
+              <div class="pf-activity-item">
+                <div class="pf-act-dot" style="background:#92400e;" aria-hidden="true"></div>
+                <div class="pf-act-info">
+                  <div class="pf-act-title">Cleaning — Sita Tamang</div>
+                  <div class="pf-act-date">Apr 27, 2025</div>
+                </div>
+                <span class="booking-status status-pending">Pending</span>
+              </div>
+            </div>
+            <a href="bookings.html" class="pf-view-all-link">View all bookings →</a>
+          </div>
+
+          <!-- ── Notification Preferences ──────────────── -->
+          <div class="pf-section-card" id="pf-prefs">
+            <div class="pf-card-header">
+              <div class="pf-card-icon" aria-hidden="true">🔔</div>
+              <div>
+                <h2 class="pf-card-title">Notifications</h2>
+                <p class="pf-card-sub">Choose what updates you receive</p>
+              </div>
+            </div>
+            <div class="pf-toggle-list">
+
+              <div class="pf-toggle-row">
+                <div class="pf-toggle-info">
+                  <div class="pf-toggle-label">Booking Confirmations</div>
+                  <div class="pf-toggle-desc">Get notified when a booking is confirmed</div>
+                </div>
+                <label class="pf-toggle" for="tog-booking">
+                  <input type="checkbox" id="tog-booking" checked />
+                  <span class="pf-toggle-slider"></span>
+                </label>
+              </div>
+
+              <div class="pf-toggle-row">
+                <div class="pf-toggle-info">
+                  <div class="pf-toggle-label">Worker Updates</div>
+                  <div class="pf-toggle-desc">Alerts when a worker is on their way</div>
+                </div>
+                <label class="pf-toggle" for="tog-worker">
+                  <input type="checkbox" id="tog-worker" checked />
+                  <span class="pf-toggle-slider"></span>
+                </label>
+              </div>
+
+              <div class="pf-toggle-row">
+                <div class="pf-toggle-info">
+                  <div class="pf-toggle-label">Promotional Offers</div>
+                  <div class="pf-toggle-desc">Discounts and seasonal deals</div>
+                </div>
+                <label class="pf-toggle" for="tog-promo">
+                  <input type="checkbox" id="tog-promo" />
+                  <span class="pf-toggle-slider"></span>
+                </label>
+              </div>
+
+              <div class="pf-toggle-row">
+                <div class="pf-toggle-info">
+                  <div class="pf-toggle-label">Email Newsletter</div>
+                  <div class="pf-toggle-desc">Weekly digest of new workers and features</div>
+                </div>
+                <label class="pf-toggle" for="tog-email">
+                  <input type="checkbox" id="tog-email" />
+                  <span class="pf-toggle-slider"></span>
+                </label>
+              </div>
+
+            </div>
+          </div><!-- /pf-prefs -->
+
+          <!-- ── Danger Zone ────────────────────────── -->
+          <div class="pf-section-card pf-danger-card" id="pf-danger">
+            <div class="pf-card-header">
+              <div class="pf-card-icon pf-danger-icon" aria-hidden="true">⚠️</div>
+              <div>
+                <h2 class="pf-card-title pf-danger-title">Danger Zone</h2>
+                <p class="pf-card-sub">Irreversible account actions</p>
+              </div>
+            </div>
+            <div class="pf-danger-actions">
+              <div class="pf-danger-row">
+                <div>
+                  <div class="pf-danger-label">Deactivate Account</div>
+                  <div class="pf-danger-desc">Temporarily hide your account from the platform</div>
+                </div>
+                <a href="#" class="pf-btn pf-btn-danger-outline">Deactivate</a>
+              </div>
+              <div class="pf-danger-row">
+                <div>
+                  <div class="pf-danger-label">Delete Account</div>
+                  <div class="pf-danger-desc">Permanently remove all your data. This cannot be undone.</div>
+                </div>
+                <a href="#" class="pf-btn pf-btn-danger">Delete</a>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /pf-right-col -->
+      </div><!-- /pf-body-grid -->
+
+    </div><!-- /db-inner -->
+  </div><!-- /db-content -->
+
+  <!-- BOTTOM NAV (Mobile) -->
+  <nav class="db-bottom-nav" role="navigation" aria-label="Mobile bottom navigation">
+    <a href="dashboard.html" class="bn-item" id="bn-home"><span class="bn-icon">🏠</span><span class="bn-label">Home</span></a>
+    <a href="bookings.html"  class="bn-item" id="bn-bookings"><span class="bn-icon">📋</span><span class="bn-label">Bookings</span></a>
+    <a href="profile.html"  class="bn-item bn-active" id="bn-profile"><span class="bn-icon">👤</span><span class="bn-label">Profile</span></a>
+    <a href="index.html"    class="bn-item" id="bn-logout"><span class="bn-icon">🚪</span><span class="bn-label">Logout</span></a>
+  </nav>
+
+</body>
+</html>
