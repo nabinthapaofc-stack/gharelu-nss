@@ -1091,20 +1091,46 @@ footer {
   display: flex;
   overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+/* Add a colorful blob behind the sidebar to make the glassmorphism pop */
+.db-body::before {
+  content: '';
+  position: fixed;
+  top: -100px; left: -100px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(37,99,235,0.4) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 1; /* Below sidebar */
+  pointer-events: none;
+}
+.db-body::after {
+  content: '';
+  position: fixed;
+  bottom: -150px; left: -50px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(56,189,248,0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* ── Sidebar ────────────────────────────────────────── */
 .db-sidebar {
   width: 240px;
   flex-shrink: 0;
-  background: var(--navy);
+  /* Premium Glassmorphism */
+  background: rgba(13, 39, 72, 0.65);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   min-height: 100vh;
   position: fixed;
   top: 0; left: 0;
   display: flex;
   flex-direction: column;
   padding: 28px 16px;
-  border-right: 1px solid rgba(255,255,255,.07);
+  border-right: 1px solid rgba(255,255,255,.1);
+  box-shadow: 4px 0 24px rgba(0,0,0,0.1);
   z-index: 200;
 }
 
@@ -1147,6 +1173,8 @@ footer {
   min-height: 100vh;
   min-width: 0;
   overflow-x: hidden;
+  position: relative;
+  z-index: 2;
 }
 
 /* ── Top bar ─────────────────────────────────────────── */
