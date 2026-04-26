@@ -67,6 +67,11 @@ img { display: block; max-width: 100%; }
 .container { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
 section    { padding: 100px 0; }
 
+.svg-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 /* ── TYPE HELPERS ────────────────────────────────────── */
 .eyebrow {
   display: inline-flex;
