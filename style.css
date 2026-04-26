@@ -1187,13 +1187,17 @@ footer {
 
 /* ── Top bar ─────────────────────────────────────────── */
 .db-topbar {
-  position: sticky; top: 0; z-index: 100;
-  background: var(--white);
-  border-bottom: 1px solid #e2e8f4;
+  position: sticky; top: 16px; z-index: 100;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid #e2e8f4;
+  border-radius: 20px;
+  margin: 16px 16px 24px 0;
   padding: 0 28px;
   height: 68px;
   display: flex; align-items: center; justify-content: space-between;
-  box-shadow: 0 2px 12px rgba(13,27,53,.07);
+  box-shadow: 0 4px 20px rgba(13,27,53,.05);
 }
 
 .db-topbar-left { display: flex; align-items: center; gap: 14px; }
